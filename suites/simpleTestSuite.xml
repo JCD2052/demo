@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Simple JsonPlaceholder API service suite.">
+    <test name="User and Post services API test.">
+        <classes>
+            <class name="tests.SimpleJsonPlaceholderTest">
+                <methods>
+                    <include name="getAllPostsAndCheckSortingTest"/>
+                    <include name="getPostByIdTest"/>
+                    <include name="getNonExistentPostTest"/>
+                    <include name="createNewPostTest"/>
+                    <include name="getCertainUserFromUsersListTest"/>
+                    <include name="getUserByIdTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
