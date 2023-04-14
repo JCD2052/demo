@@ -16,7 +16,7 @@ import static steps.TestSteps.assertContentTypes;
 import static steps.TestSteps.assertStatusCodes;
 
 public class StepDefinitions {
-    private final ScenarioContext context = new ScenarioContext();
+    private static final ScenarioContext context = new ScenarioContext();
     private final AlbumsService albumsService = new AlbumsService();
 
     @When("I perform GET response to albums service I receive and save a {string}")

@@ -1,6 +1,6 @@
 package org.jcd2052.api.entitygenerator;
 
-import aquality.selenium.core.logging.Logger;
+import aquality.selenium.browser.AqualityServices;
 import org.jcd2052.api.config.PropertyConfig;
 import org.jcd2052.api.config.TestDataConfig;
 import org.jcd2052.api.models.Post;
@@ -17,7 +17,7 @@ public class PostGenerator {
         Post post = new Post(testDataConfig.createUserId(),
                 RandomUtils.createRandomString(testDataConfig.randomStringLength()),
                 RandomUtils.createRandomString(testDataConfig.randomStringLength()));
-        Logger.getInstance().info("Generated post: " + post);
+        AqualityServices.getLogger().info("Generated post: " + post);
         return post;
     }
 }

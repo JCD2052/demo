@@ -1,6 +1,6 @@
 package tests;
 
-import aquality.selenium.core.logging.Logger;
+import aquality.selenium.browser.AqualityServices;
 import io.qameta.allure.Feature;
 import io.restassured.response.Response;
 import org.apache.http.entity.ContentType;
@@ -101,7 +101,7 @@ public class SimpleJsonPlaceholderTest {
                 .findFirst()
                 .orElseThrow(() -> {
                     String message = "Couldn't find user with id: " + userIdToGet;
-                    Logger.getInstance().error(message);
+                    AqualityServices.getLogger().error(message);
                     return new IllegalArgumentException(message);
                 });
         Assert.assertEquals(userWithExpectedUserId, TEST_USER,
