@@ -9,14 +9,16 @@ import org.testng.annotations.DataProvider;
         glue = {
                 "bddtests/stepdefenitions"
         },
-        plugin = {"pretty",
-                "io.qameta.allure.cucumber6jvm.AllureCucumber6Jvm"})
+        plugin = {
+                "io.qameta.allure.cucumber5jvm.AllureCucumber5Jvm",
+                "aquality.tracking.integrations.cucumber5jvm.AqualityTrackingCucumber5Jvm"
+        },
+        strict = true)
 public class TestRunner extends AbstractTestNGCucumberTests {
 
-        @Override
-        @DataProvider
-        public Object[][] scenarios() {
-                return super.scenarios();
-        }
-
+    @Override
+    @DataProvider
+    public Object[][] scenarios() {
+        return super.scenarios();
+    }
 }

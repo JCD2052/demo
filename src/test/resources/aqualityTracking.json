@@ -1,0 +1,11 @@
+{
+  "enabled": true,
+  "host": "http://54.164.17.128:8888/",
+  "token": "7393e80b-668c-45db-ad82-ae55484fab781681553197841",
+  "projectId": 2,
+  "executor": "Jenkins",
+  "suiteName": "My suite",
+  "buildName": "1.0.0",
+  "environment": "Stage",
+  "attachmentsDirectory": "target/attachments"
+}

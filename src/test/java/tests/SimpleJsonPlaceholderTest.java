@@ -27,7 +27,7 @@ import static steps.TestSteps.assertContentTypes;
 import static steps.TestSteps.assertStatusCodes;
 
 @Feature("Simple JsonPlaceholder API Service Test")
-public class SimpleJsonPlaceholderTest {
+public class SimpleJsonPlaceholderTest extends BaseTest {
     private static final String TEST_USER_JSON = "src/test/resources/testUser.json";
     private static final String EMPTY_JSON = "{}";
     private static final User TEST_USER = ObjectConvertor.getEntityFromFile(
