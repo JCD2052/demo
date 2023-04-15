@@ -6,7 +6,16 @@ import io.restassured.response.Response;
 import org.apache.http.entity.ContentType;
 import org.testng.Assert;
 
+import java.util.Properties;
+
 public class TestSteps {
+    private static final String AQUALITY_SUITE_NAME_PROPERTY = "aquality.suiteName";
+
+    public static void setSuiteSystemPropertyFroTracking(String suiteName) {
+        AqualityServices.getLogger().info("Current suite name: " + suiteName);
+        Properties systemProperties = System.getProperties();
+        systemProperties.setProperty(AQUALITY_SUITE_NAME_PROPERTY, suiteName);
+    }
 
     @Step("Check status code from response. Expected to receive {expectedStatusCode}")
     public static void assertStatusCodes(Response response, int expectedStatusCode) {

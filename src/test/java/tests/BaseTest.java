@@ -1,24 +1,20 @@
 package tests;
 
 import aquality.tracking.integrations.core.AqualityTrackingLifecycle;
-import org.testng.ISuite;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
-
-import java.util.Properties;
+import steps.TestSteps;
 
 public abstract class BaseTest {
-    private static final String AQUALITY_SUITE_NAME_PROPERTY = "aquality.suiteName";
     private final AqualityTrackingLifecycle lifecycle = new AqualityTrackingLifecycle();
 
     @BeforeSuite
     protected void beforeSuite(ITestContext context) {
-        Properties systemProperties = System.getProperties();
-        systemProperties.setProperty(AQUALITY_SUITE_NAME_PROPERTY, context.getSuite().getName());
+        TestSteps.setSuiteSystemPropertyFroTracking(context.getSuite().getName());
         lifecycle.startTestRun();
     }
 
