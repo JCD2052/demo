@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Simple JsonPlaceholder API service all test suite.">
+    <suite-files>
+        <suite-file path="bddTestSuite.xml"/>
+        <suite-file path="simpleTestSuite.xml"/>
+    </suite-files>
+</suite>
