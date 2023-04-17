@@ -1,7 +1,6 @@
 {
   "enabled": true,
   "host": "http://54.164.17.128:8888/",
-  "token": "ef31f268-3f81-4699-a97d-834af0b4843d1681573046303",
   "projectId": 3,
   "executor": "Jenkins",
   "suiteName": "My suite",
