@@ -11,6 +11,8 @@
                     <include name="createNewPostTest"/>
                     <include name="getCertainUserFromUsersListTest"/>
                     <include name="getUserByIdTest"/>
+                    <include name="getNonExistentPostAndCheckIfStatusOkTest"/>
+                    <include name="getAllPostsAndFailIfTimeIsOut"/>
                 </methods>
             </class>
         </classes>

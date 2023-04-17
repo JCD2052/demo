@@ -115,4 +115,18 @@ public class SimpleJsonPlaceholderTest extends BaseTest {
         Assert.assertEquals(convertResponse(response, User.class), TEST_USER,
                 "Received user data doesn't match with expected user data.");
     }
+
+    @Test(description = "Get a not exist post and check if status OK.")
+    public void getNonExistentPostAndCheckIfStatusOkTest() {
+        Response response = postsService.getPostById(testDataConfig.notExistPostId());
+        assertStatusCodes(response, HttpURLConnection.HTTP_OK);
+        Assert.assertEquals(response.asString(), EMPTY_JSON,
+                "Response body is not empty.");
+    }
+
+    @Test(description = "Get all posts from service and fail if time is out.", timeOut = 50)
+    public void getAllPostsAndFailIfTimeIsOut() {
+        postsService.getAllPosts();
+        Assert.assertTrue(true, "Test is successful");
+    }
 }
