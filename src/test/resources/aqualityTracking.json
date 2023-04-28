@@ -1,0 +1,10 @@
+{
+  "enabled": true,
+  "host": "http://54.164.17.128:8888/",
+  "projectId": 3,
+  "executor": "Jenkins",
+  "suiteName": "My suite",
+  "buildName": "1.0.0",
+  "environment": "Stage",
+  "attachmentsDirectory": "target/attachments"
+}

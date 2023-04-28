@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Simple JsonPlaceholder API service suite via Cucumber.">
+    <test name="Albums and photos API services.">
+        <classes>
+            <class name="bddtests.testrunner.TestRunner">
+            </class>
+        </classes>
+    </test>
+</suite>
